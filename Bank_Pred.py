@@ -26,7 +26,7 @@ def encodeData(cols, data):
     le = LabelEncoder()
     for col in cols:
         if data[col].dtype == object:  
-            data[col] = data[col].fillna('-1').astype(str)  
+            data[col] = data[col].fillna('-2').astype(str)  
             data[col] = le.fit_transform(data[col])
     
     return data
